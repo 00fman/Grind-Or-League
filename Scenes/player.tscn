@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4iqcgortaton"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_fo7nd"]
+[ext_resource type="Texture2D" uid="uid://pk3666rronv0" path="res://icon.svg" id="2_1c70w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n31j4"]
+size = Vector2(127, 130)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_fo7nd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource("2_1c70w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_n31j4")
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.383
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -17.0
+offset_top = -101.0
+offset_right = 23.0
+offset_bottom = -78.0
+
+[node name="Camera2D" type="Camera2D" parent="."]

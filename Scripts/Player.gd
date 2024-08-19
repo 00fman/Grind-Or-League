@@ -46,5 +46,7 @@ func _physics_process(delta):
 		velocity.x = 0
 		velocity.y = 0
 		Dashing = 0
+	if Input.is_action_pressed("attack"):
+		$Label.text = "Attacking"
 	move_and_slide()
 	look_at(get_global_mouse_position())

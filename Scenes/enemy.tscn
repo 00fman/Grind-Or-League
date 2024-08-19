@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://57yexqh28nqx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ewvak"]
+radius = 25.0
+height = 88.0
+
+[node name="testdummy" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ewvak")
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D"]
+position = Vector2(2, 1)
+polygon = PackedVector2Array(-17, -33, 15, -34, 15, 34, -17, 34)
