@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://6lv18ovin08h"]
+
+[ext_resource type="Script" path="res://Scenes/PlayButton.gd" id="1_am4ql"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cf5ne"]
+font_size = 50
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = -279.0
+offset_top = 65.0
+offset_right = 280.0
+offset_bottom = 218.0
+text = "PLAY"
+script = ExtResource("1_am4ql")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -102.0
+offset_top = -205.0
+offset_right = 139.0
+offset_bottom = -136.0
+text = "GAME!!!!!!!"
+label_settings = SubResource("LabelSettings_cf5ne")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

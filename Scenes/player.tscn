@@ -7,6 +7,8 @@
 size = Vector2(127, 130)
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_fo7nd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -28,3 +30,4 @@ offset_right = 23.0
 offset_bottom = -78.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.935, 1.935)
